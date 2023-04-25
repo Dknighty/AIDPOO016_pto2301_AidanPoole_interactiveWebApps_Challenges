@@ -5,5 +5,3 @@ import { year } from './configuration_challenge1.js'
 
 const message = '© ' + company + ' ('+ year  +')'
 document.querySelector("footer").innerText= message;
-
-console.log(company)
