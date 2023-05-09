@@ -3,7 +3,7 @@ const statuses = 'parent' // did not have = but instead :
 let count = 0
 
 
-if (2050) {
+if (true) {
 	console.log("January", 'New Year’s Day') // added bracket 
 	console.log("March", 'Human Rights Day') 
 	console.log(date, 'Family Day')
@@ -17,7 +17,7 @@ if (2050) {
   }
 
 
-	if ("parent") {
+	if (true) {
 	console.log(date, 'Christmas Day')
 	count = count + 1
 	}
