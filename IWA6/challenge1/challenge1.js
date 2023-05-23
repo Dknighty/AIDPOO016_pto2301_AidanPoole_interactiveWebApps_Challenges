@@ -8,3 +8,4 @@ const secondaryValid = secondaryPhone.toString()
 
 console.log('Primary phone is valid numerical string:', primaryValid)
 console.log('Secondary phone is valid numerical string:', secondaryValid)
+
