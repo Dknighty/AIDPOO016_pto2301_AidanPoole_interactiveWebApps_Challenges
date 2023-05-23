@@ -20,19 +20,17 @@ const donutsThree= document.querySelector('[data-donuts="11"]');
 const pancakesThree= document.querySelector('[data-pancakes="15"]');
 const statusThree= document.querySelector('[data-delivered="true"]');
 
-data-biscuitsOne = data.biscuits;
-data-donutsOne = data-root.donuts;
-data-pancakesOne = data-root.pancakes;
-data-statusOne = data-root.status ? Delivered = Pending:
+biscuitsOne = data.biscuits;
+donutsOne = data-root.donuts;
+pancakesOne = data-root.pancakes;
+statusOne = data-root.status ? Delivered = Pending:
 
+biscuitsTwo= root.biscuits;
+donutsTwo = root.donuts;
+pancakesTwo = root.pancakes;
+statusTwo = root.status ? Delivered = Pending:
 
-
-biscuits= root.biscuits;
-donuts = root.donuts;
-pancakes = root.pancakes;
-statuses = root.status ? Delivered = Pending:
-
-biscuits = root.biscuits;
-donuts = root.donuts;
-pancakes = root.pancakes;
-statuses = root.status ? Delivered = Pending: 
+biscuitsThree = root.biscuits;
+donutsThree = root.donuts;
+pancakesThree = root.pancakes;
+statusThree = root.status ? Delivered; 
