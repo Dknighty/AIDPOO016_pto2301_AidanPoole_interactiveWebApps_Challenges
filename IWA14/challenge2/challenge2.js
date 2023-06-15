@@ -58,5 +58,3 @@ example2.calculate()
 
 
 
-console.log(48)
-console.log(12)
