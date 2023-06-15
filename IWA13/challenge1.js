@@ -21,10 +21,8 @@ const calcUser = () => {
 
 const checkUser = () => {
 	if (user && state === 'requesting') {
-		console.log(`User: ${user} (${calculated})`)
-	}else {
-        console.log(state,calculated)
-    }
+		console.log(`User: ${user} (${calculated})`)}
+    return;
 }
 
 // Only allowed to change code above
