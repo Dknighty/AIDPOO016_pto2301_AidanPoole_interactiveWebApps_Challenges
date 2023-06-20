@@ -8,18 +8,18 @@ const data = {
 
 // Only edit below
 
-const first = data.lists[0][1][4];
-const second = data.lists[1][1][6];  // had to call an arrary within an array to return last number 
-const third = data.lists[2][1][2];
+const first = data.lists[0][1].slice(-1);
+const second = data.lists[1][1].slice(-1);  // had to call an arrary within an array to return last number 
+const third = data.lists[2][1].slice(-1);
 
 const result = []
 
 const extractBiggest = () => {
-	if (first > second) {
-		return first
+	if (first < second) {
+		return second
 	}
 
-	if (third <= 1) {
+	if (third < 1) {
 		return second
 	}
 	
