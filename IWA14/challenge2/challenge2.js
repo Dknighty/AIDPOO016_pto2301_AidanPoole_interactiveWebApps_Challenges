@@ -9,9 +9,9 @@ const multiply = () => {
 }
 
 function internal() {
-	const added = this.add(this.a, this.b)
-	multiply(this.a, this.b)
-	return this
+	const added = add(example1.a, example2.b)
+	const multiplied = multiply(example1.a, example2.b)
+	return added 
 }
 
 // Not allowed to change below this
@@ -40,21 +40,3 @@ const example2 = {
 
 example1.calculate()
 example2.calculate()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
