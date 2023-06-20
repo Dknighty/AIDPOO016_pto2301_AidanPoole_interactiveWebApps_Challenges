@@ -20,11 +20,10 @@ const extractBiggest = () => {
 	if (first < second) {
 		return second.pop()
 	}
-
 	if (third < 1) {
 		return second.pop()
 	}
-	
+
 	return third.pop()
 }
 
