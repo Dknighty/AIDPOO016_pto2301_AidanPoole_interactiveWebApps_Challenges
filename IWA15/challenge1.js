@@ -12,18 +12,20 @@ const first = data.lists[0][1].slice(-1);
 const second = data.lists[1][1].slice(-1);  // had to call an arrary within an array to return last number 
 const third = data.lists[2][1].slice(-1);
 
-const result = []
+const result = [
+   
+]
 
 const extractBiggest = () => {
 	if (first < second) {
-		return second
+		return second.pop()
 	}
 
 	if (third < 1) {
-		return second
+		return second.pop()
 	}
 	
-	return third
+	return third.pop()
 }
 
 // Only edit above
