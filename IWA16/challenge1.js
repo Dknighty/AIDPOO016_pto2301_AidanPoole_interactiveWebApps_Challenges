@@ -72,8 +72,8 @@ const MONTHS = [
       return data.response.data.NM372;
     } else if (athlete == SV782) {
       return data.response.data.SV782;
-    } else return "No athlete chosen"
-  }
+    }
+  
   
     const fragment = document.createDocumentFragment();
   
@@ -95,9 +95,10 @@ const MONTHS = [
     }  else if (athlete == SV782 && prop == data.response.data.SV782[3][2]) {
       return data.response.data.SV782[3][2][0];
   } else if (athlete == SV782 && prop == data.response.data.SV782[3][3]) {
-    return data.response.data.SV782[3][3][0]; 
-  } else return "No Athlete chosen"
-}
+    return data.response.data.SV782[3][3][0]; } 
+  }
+  
+
     const month = ;
     const year = 2022;
   
