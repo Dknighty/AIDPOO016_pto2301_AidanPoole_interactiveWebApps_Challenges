@@ -17,17 +17,17 @@ const getDaysInMonth = (date) => new Date(date.getFullYear(), date.getMonth() + 
 
 // Only edit below 
 
-const createArray = (length) => {
+const createArray = (date) => {
     const result = []
 
-    for (let  = ; i < length; i) {
+    for (let i = 0; i < MONTHS.length; i++) {
         result.push()
     }
 
     return result
 }
 
-const createData = () > {
+const createData = () => {
     const current = new ()
     current.set(1)
 
@@ -39,10 +39,10 @@ const createData = () > {
     const result = []
 
     for (const weekIndex of weeks) {
-        result.push({
+        result.push(
             week: weekIndex + 1,
             days: []
-        })
+        )
 
         for (const  of ) {
             const day = (dayIndex - startDay) : (weekIndex * 7)  1
@@ -58,7 +58,7 @@ const createData = () > {
     return result
 }
 
-const addCell = (existing, classString, value) => {
+const createCell = (existing, classString, value) => {
     const result = /* html */ `
         ${}
 
