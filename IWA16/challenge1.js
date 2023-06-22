@@ -68,25 +68,43 @@ const MONTHS = [
   // Only edit below this comment
   
   const createHtml = (athlete) => {
-    firstName, surname, id, races = athlete
-    [date], [time] = races.reverse()
+    if (athlete == NM372) { 
+      return data.response.data.NM372;
+    } else if (athlete == SV782) {
+      return data.response.data.SV782;
+    } else return "No athlete chosen"
+  }
   
     const fragment = document.createDocumentFragment();
   
     title = document.createElement(h2);
-    title= id;
+    title= id.createElement(h2);
     fragment.appendChild(title);
   
     const list = document.createElement(dl);
-  
-    const day = date.getDate();
-    const month = MONTHS[date.month];
-    const year = date.year;
+    const day = dayOfRace(athlete, prop)
+    const dayOfRace = () => {
+    if (athlete == NM372 && prop == data.response.data.NM372[3][0]) { 
+      return data.response.data.NM372[3][0][0];
+    } else if (athlete == NM372 && prop == data.response.data.NM372[3][1]) {
+      return data.response.data.NM372[3][1][0];
+    } else if (athlete == SV782 && prop == data.response.data.SV782[3][0]) {
+        return data.response.data.SV782[3][0][0];
+    } else if (athlete == SV782 && prop == data.response.data.SV782[3][1]) {
+      return data.response.data.SV782[3][1][0];
+    }  else if (athlete == SV782 && prop == data.response.data.SV782[3][2]) {
+      return data.response.data.SV782[3][2][0];
+  } else if (athlete == SV782 && prop == data.response.data.SV782[3][3]) {
+    return data.response.data.SV782[3][3][0]; 
+  } else return "No Athlete chosen"
+}
+    const month = ;
+    const year = 2022;
   
     first, second, third, fourth = timeAsArray;
     total = first + second + third + fourth;
   
-    const hours = total / 60;
+    const hours = data.response.data.NM372 / 60;
     const minutes = total / hours / 60;
   
     list.innerHTML = /* html */ `
