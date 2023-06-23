@@ -8,7 +8,13 @@ if (!books && !Array.isArray(books)) {
 if (!range && range.length < 2) {
     throw new Error('Range must be an array with two numbers')
 } 
-
+let list = document.getElementById("PreviewofBooks");
+for (i = 0; i < books.length; i++) {
+        var li = document.createElement('li'); // using a for loop to create a list preview of all books
+        li.innerText = books[i]['title'] +" "+ books[i]['author']; // calling the properties of the array to be used in list
+		list.appendChild(li); 
+    }
+    
 day = { 
     dark: '10, 10, 20',
     light: '255, 255, 255',
@@ -21,12 +27,7 @@ night = {
 fragment = document.createDocumentFragment()
 const extract = books.slice(0, 36) // changed the variable "extracted" as it is declared twice and cannot have that
 
-let list = document.getElementById("PreviewofBooks");
-for (i = 0; i < books.length; i++) {
-        var li = document.createElement('li'); // using a for loop to create a list preview of all books
-        li.innerText = books[i]['title'] +" "+ books[i]['author']; // calling the properties of the array to be used in list
-        list.appendChild(li); 
-    }
+
 
     fragment.appendChild(preview)
 

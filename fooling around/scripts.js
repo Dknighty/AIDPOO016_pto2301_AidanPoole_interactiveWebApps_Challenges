@@ -25253,5 +25253,10 @@ let list = document.getElementById("PreviewofBooks");
 for (i = 0; i < books.length; i++) {
         var li = document.createElement('li'); // using a for loop to create a list preview of all books
         li.innerText = books[i]['title'] +" "+ books[i]['author']; // calling the properties of the array to be used in list
-        list.appendChild(li); 
+		list.appendChild(li); 
     }
+	fragment.appendChild(preview)
+
+
+	data-list-items.appendChild(fragment)
+	
