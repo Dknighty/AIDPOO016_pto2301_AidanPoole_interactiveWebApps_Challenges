@@ -1,6 +1,7 @@
 matches = books
 page = 1;
-
+import { authors } from "./data.js"; 
+import { books } from "./data.js";
 if (!books && !Array.isArray(books)) {
     throw new Error('Source required') // moved {} line down so as to increase readability 
  }
@@ -17,20 +18,20 @@ night = {
     dark: '255, 255, 255',
     light: '10, 10, 20',
 }
-
 fragment = document.createDocumentFragment()
-const extraction = books.slice(0, 36) // changed the variable "extracted" as it is declared twice and cannot have that
+const extract = books.slice(0, 36) // changed the variable "extracted" as it is declared twice and cannot have that
 
-for ({ author, image, title, id }; extraction.length; i++) {
-    const preview = createPreview({
-        author,
-        id,
-        image,
-        title
-    })
+let list = document.createElement("Preview"); //using a for loop to create a preview of all book titles and authors
+for ({ authors, title }; authors.length; i++) {
+    const myPreview = (i, prop) => {
+        document.getElementById("list");  
+            list.innerText = books[i][3], books[i][8];
+    }
+    myPreview() 
+}
 
     fragment.appendChild(preview)
-}
+
 
 data-list-items.appendChild(fragment)
 
@@ -185,7 +186,7 @@ data-list-items.click(); {
     }
     
     if (!active) { 
-        
+
     }
     data-list-active.open === true
     data-list-blur + data-list-image === active.image
