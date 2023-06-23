@@ -7,6 +7,25 @@ if (!books && !Array.isArray(books)) {
 if (!range && range.length < 2) {
     throw new Error('Range must be an array with two numbers')
 } 
+const fantasy = "Fantasy/Fiction"; 
+const economics = "Economics";
+const scifci = "Science Fiction";
+const romance = "Romance"; 
+const mystery = "Mystery"; 
+const selfHelp = "Self-Help";
+const poetry = "Poetry";
+const biography = "Biography"
+const children = "childrens literature";
+
+const booksToRead = {
+   sneakpeak: [ 
+    ["A court of Thorns and Roses","Sarah J Maas", fantasy,],
+    ["Moby Dick","Herman Melville",fantasy],
+    ["Call me by your Name", "Andre Aciman", romance],
+    []
+]
+}
+
 
 day = { 
     dark: '10, 10, 20',
@@ -34,8 +53,8 @@ for ({ author, image, title, id }; extraction; i++) {
 
 data-list-items.appendChild(fragment)
 
-genres = document.createDocumentFragment()
-element = document.createElement('option')
+genres = document.createDocumentFragment();
+element = document.createElement('option');
 element.value = 'any'
 element = 'All Genres'
 genres.appendChild(element)
@@ -185,7 +204,7 @@ data-list-items.click(); {
     }
     
     if (!active) { 
-        return
+        return ""
     }
     data-list-active.open === true
     data-list-blur + data-list-image === active.image
