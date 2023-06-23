@@ -21,14 +21,13 @@ night = {
 fragment = document.createDocumentFragment()
 const extract = books.slice(0, 36) // changed the variable "extracted" as it is declared twice and cannot have that
 
-let list = document.createElement("Preview"); //using a for loop to create a preview of all book titles and authors
-for ({ authors, title }; authors.length; i++) {
-    const myPreview = (i, prop) => {
-        document.getElementById("list");  
-            list.innerText = books[i][3], books[i][8];
+let list = document.getElementById("Preview of Books");
+for (i = 0; books.length; i++) {
+        var li = document.createElement('li'); // using a for loop to create a list preview of all books
+        li.innerText = books[i][3] + books[i][8];
+        list.appendChild(li); 
     }
-    myPreview() 
-}
+console.table(books[1][3])
 
     fragment.appendChild(preview)
 
