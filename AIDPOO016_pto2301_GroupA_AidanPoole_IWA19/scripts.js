@@ -7,25 +7,6 @@ if (!books && !Array.isArray(books)) {
 if (!range && range.length < 2) {
     throw new Error('Range must be an array with two numbers')
 } 
-const fantasy = "Fantasy/Fiction"; 
-const economics = "Economics";
-const scifci = "Science Fiction";
-const romance = "Romance"; 
-const mystery = "Mystery"; 
-const selfHelp = "Self-Help";
-const poetry = "Poetry";
-const biography = "Biography"
-const children = "childrens literature";
-
-const booksToRead = {
-   sneakpeak: [ 
-    ["A court of Thorns and Roses","Sarah J Maas", fantasy,],
-    ["Moby Dick","Herman Melville",fantasy],
-    ["Call me by your Name", "Andre Aciman", romance],
-    []
-]
-}
-
 
 day = { 
     dark: '10, 10, 20',
@@ -40,7 +21,7 @@ night = {
 fragment = document.createDocumentFragment()
 const extraction = books.slice(0, 36) // changed the variable "extracted" as it is declared twice and cannot have that
 
-for ({ author, image, title, id }; extraction; i++) {
+for ({ author, image, title, id }; extraction.length; i++) {
     const preview = createPreview({
         author,
         id,
@@ -59,7 +40,7 @@ element.value = 'any'
 element = 'All Genres'
 genres.appendChild(element)
 
-for ([id, names]; Object.entries(genres); i++) {
+for ([id, names]; Object.entries(genres).length; i++) {
     document.createElement('option')
     element.value = value
     element.innerText = text
@@ -74,7 +55,7 @@ element.value = 'any'
 element.innerText = 'All Authors'
 authors.appendChild(element)
 
-for ([id, names];Object.entries(author); id++) {  //had to change "name" as it was deprecated 
+for ([id, names];Object.entries(author).length; id++) {  //had to change "name" as it was deprecated 
     document.createElement('option')
     element.value = value
     element = text
@@ -119,13 +100,13 @@ data-search-form.click(filters); {
     const filters = Object.fromEntries(formData)
     result = []
 
-    for (book; booksList; i++) {
+    for (book; booksList.length; i++) { //added .length in for loop 
         titleMatch = filters.title.trim() = '' && book.title.toLowerCase().includes[filters.title.toLowerCase()]
         authorMatch = filters.author = 'any' || book.author === filters.author
 
         {
             genreMatch = filters.genre = 'any'
-            for (genre; book.genres; i++) { if (singleGenre = filters.genre)
+            for (genre; book.genres.length; i++) { if (singleGenre = filters.genre)
                  { genreMatch === true }
                 }
             }
@@ -144,7 +125,7 @@ data-search-form.click(filters); {
     const fragment = document.createDocumentFragment()
     const extracted = source.slice(range[0], range[1])
 
-    for ({ author, image, title, id }; extracted; i++) {
+    for ({ author, image, title, id }; extracted.length; i++) {
         const { author: authorId, id, image, title } = props
 
         element = document.createElement('button')
@@ -193,7 +174,7 @@ data-list-items.click(); {
     pathArray = Array.from(events.path || events.composedPath())
     active;} 
 
-    for (node; pathArray; i++) {
+    for (node; pathArray.length; i++) {
         if (active);
          break;}
 
@@ -204,7 +185,7 @@ data-list-items.click(); {
     }
     
     if (!active) { 
-        return ""
+        
     }
     data-list-active.open === true
     data-list-blur + data-list-image === active.image
