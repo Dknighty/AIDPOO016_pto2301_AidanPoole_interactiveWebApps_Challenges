@@ -133,7 +133,7 @@
   }
   
   .list__items {
-    display: grid;
+    display: table-row;
     padding: 2rem 1rem;
     grid-template-columns: 1fr;
     grid-column-gap: 0.5rem;
@@ -199,7 +199,7 @@
   
   /* preview */
   
-  .preview {
+  #PreviewofBooks {
     border-width: 0;
     width: 100%;
     font-family: Roboto, sans-serif;
